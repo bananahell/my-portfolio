@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+// Colors
+$bg-primary: #121212;
+$bg-surface: #1e1e1e;
+$accent-primary: #b8860b;
+$accent-secondary: #8b3a3a;
+$text-primary: #e0e0e0;
+$text-muted: #888888;
+$border-color: #3a2a1a;
+
+:root {
+  --bg-primary: #121212;
+  --bg-surface: #1e1e1e;
+  --accent-primary: #b8860b;
+  --accent-secondary: #8b3a3a;
+  --text-primary: #e0e0e0;
+  --text-muted: #888888;
+  --border-color: #3a2a1a;
+
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--accent-primary);
+  margin: 0 0 0.5rem;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  &:hover {
+    color: lighten(#b8860b, 10%);
+  }
+}
