@@ -1,0 +1,13 @@
+# docker compose -f docker-compose.yml build --no-cache && docker compose -f docker-compose.yml up --build
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.angular-dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./angular:/app
+      - /app/node_modules
+    working_dir: /app
