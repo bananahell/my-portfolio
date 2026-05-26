@@ -1,11 +1,25 @@
 <nav class="navbar">
   <a routerLink="/" class="logo">PN</a>
   <div class="nav-links">
-    <a routerLink="/about">About</a>
-    <a routerLink="/projects">Projects</a>
-    <a routerLink="/blog">Blog</a>
-    <a routerLink="/now">Now</a>
-    <a routerLink="/contact">Contact</a>
+    <a routerLink="/about">{{ 'nav.about' | transloco }}</a>
+    <a routerLink="/projects">{{ 'nav.projects' | transloco }}</a>
+    <a routerLink="/blog">{{ 'nav.blog' | transloco }}</a>
+    <a routerLink="/now">{{ 'nav.now' | transloco }}</a>
+    <a routerLink="/contact">{{ 'nav.contact' | transloco }}</a>
+
+    <app-language-switcher />
+
+    <button
+      class="theme-toggle"
+      (click)="toggleTheme()"
+      [attr.aria-label]="
+        themeService.currentTheme() === 'dark'
+          ? ('theme.switchToLight' | transloco)
+          : ('theme.switchToDark' | transloco)
+      "
+    >
+      {{ themeService.currentTheme() === 'dark' ? '☀️' : '🌙' }}
+    </button>
   </div>
 </nav>
 <main>

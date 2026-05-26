@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "subtitle": "Engenheiro. Metaleiro. Marido.",
+    "intro": "Minha missão é fazer código que dure, logo após os ensaios da minha banda.",
+    "cta_about": "Sobre Mim",
+    "cta_projects": "Ver Projetos"
+  },
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "blog": "Blog",
+    "now": "Agora",
+    "contact": "Contato"
+  },
+  "theme": {
+    "switchToLight": "Mudar para modo claro",
+    "switchToDark": "Mudar para modo escuro"
+  },
+  "lang": {
+    "switchTo": "Mudar para"
+  }
+}

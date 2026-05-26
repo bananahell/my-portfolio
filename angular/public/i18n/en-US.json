@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "subtitle": "Engineer. Metalhead. Husband.",
+    "intro": "My mission is to build good software to last, right after my band's rehearsal.",
+    "cta_about": "About Me",
+    "cta_projects": "See My Work"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "now": "Now",
+    "contact": "Contact"
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "lang": {
+    "switchTo": "Switch to"
+  }
+}
