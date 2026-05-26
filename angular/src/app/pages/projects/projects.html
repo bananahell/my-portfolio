@@ -1,19 +1,19 @@
 <section class="projects-page">
   <div class="container">
     <div class="back-wrapper">
-      <a routerLink="/" class="back-link">← Back to Home</a>
+      <a routerLink="/" class="back-link">{{ 'projects.backToHome' | transloco }}</a>
     </div>
 
-    <h2>Projects</h2>
+    <h2>{{ 'projects.title' | transloco }}</h2>
 
-    <h3 class="section-title">OpenCV</h3>
+    <h3 class="section-title">{{ 'projects.opencvSection' | transloco }}</h3>
 
     <div class="carousel">
       <button
         class="arrow arrow-left"
         [class.disabled]="arrowsDisabled()"
         (click)="previous()"
-        aria-label="Previous project"
+        [attr.aria-label]="'projects.arrow.previous' | transloco"
       >
         ‹
       </button>
@@ -27,9 +27,9 @@
             tabindex="0"
           >
             <div class="card-content">
-              <h3>{{ proj.title }}</h3>
-              <p>{{ proj.description }}</p>
-              <span class="card-tag">{{ proj.tag }}</span>
+              <h3>{{ proj.titleKey | transloco }}</h3>
+              <p>{{ proj.descriptionKey | transloco }}</p>
+              <span class="card-tag">{{ proj.tagKey | transloco }}</span>
             </div>
           </div>
         }
@@ -37,9 +37,9 @@
         @if (activeProject(); as proj) {
           <a [routerLink]="proj.route" class="project-card active">
             <div class="card-content">
-              <h3>{{ proj.title }}</h3>
-              <p>{{ proj.description }}</p>
-              <span class="card-tag">{{ proj.tag }}</span>
+              <h3>{{ proj.titleKey | transloco }}</h3>
+              <p>{{ proj.descriptionKey | transloco }}</p>
+              <span class="card-tag">{{ proj.tagKey | transloco }}</span>
             </div>
           </a>
         }
@@ -52,9 +52,9 @@
             tabindex="0"
           >
             <div class="card-content">
-              <h3>{{ proj.title }}</h3>
-              <p>{{ proj.description }}</p>
-              <span class="card-tag">{{ proj.tag }}</span>
+              <h3>{{ proj.titleKey | transloco }}</h3>
+              <p>{{ proj.descriptionKey | transloco }}</p>
+              <span class="card-tag">{{ proj.tagKey | transloco }}</span>
             </div>
           </div>
         }
@@ -64,7 +64,7 @@
         class="arrow arrow-right"
         [class.disabled]="arrowsDisabled()"
         (click)="next()"
-        aria-label="Next project"
+        [attr.aria-label]="'projects.arrow.next' | transloco"
       >
         ›
       </button>

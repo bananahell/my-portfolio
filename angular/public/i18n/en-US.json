@@ -20,5 +20,48 @@
     "switchTo": "Switch to",
     "english": "Engilsh",
     "portuguese": "Portuguese"
+  },
+  "projects": {
+    "backToHome": "← Back to Home",
+    "title": "Projects",
+    "opencvSection": "OpenCV",
+    "arrow": {
+      "previous": "Previous project",
+      "next": "Next project"
+    },
+    "cards": {
+      "grayscale": {
+        "title": "Grayscale Filter",
+        "desc": "Turn your webcam feed into black & white in real time."
+      },
+      "face": {
+        "title": "Face Detection",
+        "desc": "Detect faces in your webcam feed using OpenCV.js."
+      },
+      "canny": {
+        "title": "Canny Edge Detection",
+        "desc": "See the world as a wireframe with the classic Canny algorithm."
+      },
+      "tag": "OpenCV"
+    }
+  },
+  "opencv": {
+    "backToProjects": "← Back to Projects",
+    "grayscale": {
+      "title": "Grayscale Filter",
+      "heading": "Real-time Grayscale",
+      "desc": "Your webcam feed processed by OpenCV.js in the browser. No video leaves your computer."
+    },
+    "face": {
+      "title": "Face Detection",
+      "heading": "Real-time Face Detection",
+      "desc": "Detect faces using your webcam and OpenCV.js, entirely in the browser."
+    },
+    "canny": {
+      "title": "Canny Edge Detection",
+      "heading": "Real-time Edge Detection",
+      "desc": "Classic Canny algorithm applied to your webcam. All processing happens in your browser."
+    },
+    "live": "Live"
   }
 }

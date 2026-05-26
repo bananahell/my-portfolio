@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 declare var cv: any;
 
 @Component({
   selector: 'app-canny-edge',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslocoPipe],
   templateUrl: './canny-edge.html',
   styleUrl: './canny-edge.scss',
 })

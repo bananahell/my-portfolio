@@ -1,9 +1,9 @@
 <section class="face-detection">
   <div class="back-wrapper">
-    <a routerLink="/projects" class="back-link">← Back to Projects</a>
+    <a routerLink="/projects" class="back-link">{{ 'opencv.backToProjects' | transloco }}</a>
   </div>
 
-  <h2>Face Detection</h2>
+  <h2>{{ 'opencv.face.title' | transloco }}</h2>
 
   <div class="demo-card">
     <div class="demo-area">
@@ -12,9 +12,9 @@
       <canvas #canvasElement class="output-canvas"></canvas>
     </div>
     <div class="demo-info">
-      <h3>Real-time Face Detection</h3>
-      <p>Detect faces using your webcam and OpenCV.js, entirely in the browser.</p>
-      <div class="demo-status">Live</div>
+      <h3>{{ 'opencv.face.heading' | transloco }}</h3>
+      <p>{{ 'opencv.face.desc' | transloco }}</p>
+      <div class="demo-status">{{ 'opencv.live' | transloco }}</div>
     </div>
   </div>
 </section>

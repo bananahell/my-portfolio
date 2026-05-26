@@ -1,9 +1,9 @@
 <section class="canny-edge">
   <div class="back-wrapper">
-    <a routerLink="/projects" class="back-link">← Back to Projects</a>
+    <a routerLink="/projects" class="back-link">{{ 'opencv.backToProjects' | transloco }}</a>
   </div>
 
-  <h2>Canny Edge Detection</h2>
+  <h2>{{ 'opencv.canny.title' | transloco }}</h2>
 
   <div class="demo-card">
     <div class="demo-area">
@@ -12,9 +12,9 @@
       <canvas #canvasElement class="output-canvas"></canvas>
     </div>
     <div class="demo-info">
-      <h3>Real-time Edge Detection</h3>
-      <p>Classic Canny algorithm applied to your webcam. All processing happens in your browser.</p>
-      <div class="demo-status">Live</div>
+      <h3>{{ 'opencv.canny.heading' | transloco }}</h3>
+      <p>{{ 'opencv.canny.desc' | transloco }}</p>
+      <div class="demo-status">{{ 'opencv.live' | transloco }}</div>
     </div>
   </div>
 </section>

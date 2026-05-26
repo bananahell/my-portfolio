@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 declare var cv: any;
 
 @Component({
   selector: 'app-grayscale-demo',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslocoPipe],
   templateUrl: './grayscale-demo.html',
   styleUrl: './grayscale-demo.scss',
 })

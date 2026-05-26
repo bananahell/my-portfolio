@@ -20,5 +20,48 @@
     "switchTo": "Mudar para",
     "english": "Inglês",
     "portuguese": "Português"
+  },
+  "projects": {
+    "backToHome": "← Voltar ao Início",
+    "title": "Projetos",
+    "opencvSection": "OpenCV",
+    "arrow": {
+      "previous": "Projeto anterior",
+      "next": "Próximo projeto"
+    },
+    "cards": {
+      "grayscale": {
+        "title": "Filtro Escala de Cinza",
+        "desc": "Transforme a sua webcam em preto e branco em tempo real."
+      },
+      "face": {
+        "title": "Detecção Facial",
+        "desc": "Detecte rostos na sua webcam usando OpenCV.js."
+      },
+      "canny": {
+        "title": "Detecção de Bordas Canny",
+        "desc": "Veja o mundo como um wireframe com o clássico algoritmo Canny."
+      },
+      "tag": "OpenCV"
+    }
+  },
+  "opencv": {
+    "backToProjects": "← Voltar para Projetos",
+    "grayscale": {
+      "title": "Filtro Escala de Cinza",
+      "heading": "Escala de Cinza em Tempo Real",
+      "desc": "Feed da sua webcam processado por OpenCV.js no navegador. Nenhum vídeo sai do seu computador."
+    },
+    "face": {
+      "title": "Detecção Facial",
+      "heading": "Detecção Facial em Tempo Real",
+      "desc": "Detecte rostos usando sua webcam e OpenCV.js, inteiramente no navegador."
+    },
+    "canny": {
+      "title": "Detecção de Bordas Canny",
+      "heading": "Detecção de Bordas em Tempo Real",
+      "desc": "Algoritmo Canny clássico aplicado à sua webcam. Todo o processamento ocorre no seu navegador."
+    },
+    "live": "Ao Vivo"
   }
 }

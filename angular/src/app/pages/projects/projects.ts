@@ -1,17 +1,18 @@
 import { Component, signal, computed } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 interface Project {
   route: string;
-  title: string;
-  description: string;
-  tag: string;
+  titleKey: string;
+  descriptionKey: string;
+  tagKey: string;
 }
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslocoPipe],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
@@ -19,21 +20,21 @@ export class Projects {
   opencvProjects: Project[] = [
     {
       route: 'opencv/grayscale',
-      title: 'Grayscale Filter',
-      description: 'Turn your webcam feed into black & white in real time.',
-      tag: 'OpenCV',
+      titleKey: 'projects.cards.grayscale.title',
+      descriptionKey: 'projects.cards.grayscale.desc',
+      tagKey: 'projects.cards.tag',
     },
     {
       route: 'opencv/face-detection',
-      title: 'Face Detection',
-      description: 'Detect faces in your webcam feed using OpenCV.js.',
-      tag: 'OpenCV',
+      titleKey: 'projects.cards.face.title',
+      descriptionKey: 'projects.cards.face.desc',
+      tagKey: 'projects.cards.tag',
     },
     {
       route: 'opencv/canny',
-      title: 'Canny Edge Detection',
-      description: 'See the world as a wireframe with the classic Canny algorithm.',
-      tag: 'OpenCV',
+      titleKey: 'projects.cards.canny.title',
+      descriptionKey: 'projects.cards.canny.desc',
+      tagKey: 'projects.cards.tag',
     },
   ];
 
