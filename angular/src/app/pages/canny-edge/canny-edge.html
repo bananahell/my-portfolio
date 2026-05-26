@@ -1,0 +1,20 @@
+<section class="canny-edge">
+  <div class="back-wrapper">
+    <a routerLink="/projects" class="back-link">← Back to Projects</a>
+  </div>
+
+  <h2>Canny Edge Detection</h2>
+
+  <div class="demo-card">
+    <div class="demo-area">
+      <video #videoElement style="display: none" autoplay playsinline muted></video>
+      <canvas #hiddenCanvas style="display: none"></canvas>
+      <canvas #canvasElement class="output-canvas"></canvas>
+    </div>
+    <div class="demo-info">
+      <h3>Real-time Edge Detection</h3>
+      <p>Classic Canny algorithm applied to your webcam. All processing happens in your browser.</p>
+      <div class="demo-status">Live</div>
+    </div>
+  </div>
+</section>

@@ -29,6 +29,12 @@ export class Projects {
       description: 'Detect faces in your webcam feed using OpenCV.js.',
       tag: 'OpenCV',
     },
+    {
+      route: 'opencv/canny',
+      title: 'Canny Edge Detection',
+      description: 'See the world as a wireframe with the classic Canny algorithm.',
+      tag: 'OpenCV',
+    },
   ];
 
   currentIndex = signal(0);
