@@ -1,11 +1,11 @@
 <div class="language-switcher">
-  @for (lang of langs; track lang) {
+  @for (langCode of langs; track langCode) {
     <button
-      (click)="switchLanguage(lang)"
-      [class.active]="lang === activeLang()"
-      [attr.aria-label]="('lang.switchTo' | transloco) + ' ' + langShortNames[lang]"
+      (click)="switchLanguage(langCode)"
+      [class.active]="langCode === activeLang()"
+      [attr.aria-label]="getLabel(langCode) | async"
     >
-      {{ langShortNames[lang] }}
+      {{ langShortNames[langCode] }}
     </button>
   }
 </div>

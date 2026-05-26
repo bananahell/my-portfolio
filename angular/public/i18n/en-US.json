@@ -17,6 +17,8 @@
     "switchToDark": "Switch to dark mode"
   },
   "lang": {
-    "switchTo": "Switch to"
+    "switchTo": "Switch to",
+    "english": "Engilsh",
+    "portuguese": "Portuguese"
   }
 }
