@@ -1,13 +1,24 @@
 <nav class="navbar">
-  <a routerLink="/" class="logo">PN</a>
-  <div class="nav-links">
-    <a routerLink="/about">{{ 'nav.about' | transloco }}</a>
-    <a routerLink="/projects">{{ 'nav.projects' | transloco }}</a>
-    <a routerLink="/blog">{{ 'nav.blog' | transloco }}</a>
-    <a routerLink="/now">{{ 'nav.now' | transloco }}</a>
-    <a routerLink="/contact">{{ 'nav.contact' | transloco }}</a>
+  <a routerLink="/" class="logo" (click)="closeMenu()">PN</a>
 
-    <app-language-switcher />
+  <button
+    class="hamburger"
+    (click)="toggleMenu()"
+    [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-links" [ngClass]="{ open: menuOpen() }">
+    <a routerLink="/about" (click)="closeMenu()">{{ 'nav.about' | transloco }}</a>
+    <a routerLink="/projects" (click)="closeMenu()">{{ 'nav.projects' | transloco }}</a>
+    <a routerLink="/blog" (click)="closeMenu()">{{ 'nav.blog' | transloco }}</a>
+    <a routerLink="/now" (click)="closeMenu()">{{ 'nav.now' | transloco }}</a>
+    <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | transloco }}</a>
+
+    <app-language-switcher></app-language-switcher>
 
     <button
       class="theme-toggle"
