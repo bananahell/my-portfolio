@@ -22,58 +22,92 @@ export class Projects {
       route: 'opencv/grayscale',
       titleKey: 'projects.cards.grayscale.title',
       descriptionKey: 'projects.cards.grayscale.desc',
-      tagKey: 'projects.cards.tag',
+      tagKey: 'projects.cards.opencvTag',
     },
     {
       route: 'opencv/face-detection',
       titleKey: 'projects.cards.face.title',
       descriptionKey: 'projects.cards.face.desc',
-      tagKey: 'projects.cards.tag',
+      tagKey: 'projects.cards.opencvTag',
     },
     {
       route: 'opencv/canny',
       titleKey: 'projects.cards.canny.title',
       descriptionKey: 'projects.cards.canny.desc',
-      tagKey: 'projects.cards.tag',
+      tagKey: 'projects.cards.opencvTag',
     },
   ];
 
-  currentIndex = signal(0);
-  readonly len = this.opencvProjects.length;
+  opencvCurrentIndex = signal(0);
+  readonly opencvLen = this.opencvProjects.length;
 
-  readonly activeProject = computed(() => this.opencvProjects[this.currentIndex()]);
-  readonly leftProject = computed(() => {
-    if (this.len <= 1) {
+  readonly activeOpencvProject = computed(() => this.opencvProjects[this.opencvCurrentIndex()]);
+  readonly leftOpencvProject = computed(() => {
+    if (this.opencvLen <= 1) {
       return null;
     }
-    const idx = (this.currentIndex() - 1 + this.len) % this.len;
+    const idx = (this.opencvCurrentIndex() - 1 + this.opencvLen) % this.opencvLen;
     return this.opencvProjects[idx];
   });
-  readonly rightProject = computed(() => {
-    if (this.len <= 1) {
+  readonly rightOpencvProject = computed(() => {
+    if (this.opencvLen <= 1) {
       return null;
     }
-    const idx = (this.currentIndex() + 1) % this.len;
+    const idx = (this.opencvCurrentIndex() + 1) % this.opencvLen;
     return this.opencvProjects[idx];
   });
+  readonly opencvArrowsDisabled = computed(() => this.opencvLen <= 1);
 
-  readonly arrowsDisabled = computed(() => this.len <= 1);
-
-  previous(): void {
-    if (this.len <= 1) {
+  opencvPrevious(): void {
+    if (this.opencvLen <= 1) {
       return;
     }
-    this.currentIndex.update((i) => (i - 1 + this.len) % this.len);
+    this.opencvCurrentIndex.update((i) => (i - 1 + this.opencvLen) % this.opencvLen);
   }
-
-  next(): void {
-    if (this.len <= 1) {
+  opencvNext(): void {
+    if (this.opencvLen <= 1) {
       return;
     }
-    this.currentIndex.update((i) => (i + 1) % this.len);
+    this.opencvCurrentIndex.update((i) => (i + 1) % this.opencvLen);
+  }
+  setOpencvCurrent(index: number): void {
+    this.opencvCurrentIndex.set(index);
   }
 
-  setCurrent(index: number): void {
-    this.currentIndex.set(index);
+  sdl2Projects: Project[] = [
+    {
+      route: 'sdl/breakout',
+      titleKey: 'projects.cards.breakout.title',
+      descriptionKey: 'projects.cards.breakout.desc',
+      tagKey: 'projects.cards.sdlTag',
+    },
+  ];
+
+  sdl2CurrentIndex = signal(0);
+  readonly sdl2Len = this.sdl2Projects.length;
+
+  readonly activeSdl2Project = computed(() => this.sdl2Projects[this.sdl2CurrentIndex()]);
+  readonly leftSdl2Project = computed(() => {
+    if (this.sdl2Len <= 1) return null;
+    const idx = (this.sdl2CurrentIndex() - 1 + this.sdl2Len) % this.sdl2Len;
+    return this.sdl2Projects[idx];
+  });
+  readonly rightSdl2Project = computed(() => {
+    if (this.sdl2Len <= 1) return null;
+    const idx = (this.sdl2CurrentIndex() + 1) % this.sdl2Len;
+    return this.sdl2Projects[idx];
+  });
+  readonly sdl2ArrowsDisabled = computed(() => this.sdl2Len <= 1);
+
+  sdl2Previous(): void {
+    if (this.sdl2Len <= 1) return;
+    this.sdl2CurrentIndex.update((i) => (i - 1 + this.sdl2Len) % this.sdl2Len);
+  }
+  sdl2Next(): void {
+    if (this.sdl2Len <= 1) return;
+    this.sdl2CurrentIndex.update((i) => (i + 1) % this.sdl2Len);
+  }
+  setSdl2Current(index: number): void {
+    this.sdl2CurrentIndex.set(index);
   }
 }

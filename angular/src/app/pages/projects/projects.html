@@ -11,19 +11,19 @@
     <div class="carousel">
       <button
         class="arrow arrow-left"
-        [class.disabled]="arrowsDisabled()"
-        (click)="previous()"
+        [class.disabled]="opencvArrowsDisabled()"
+        (click)="opencvPrevious()"
         [attr.aria-label]="'projects.arrow.previous' | transloco"
       >
         ‹
       </button>
 
       <div class="cards-viewport">
-        @if (leftProject(); as proj) {
+        @if (leftOpencvProject(); as proj) {
           <div
             class="project-card left"
-            (click)="setCurrent((currentIndex() - 1 + len) % len)"
-            (keydown.enter)="setCurrent((currentIndex() - 1 + len) % len)"
+            (click)="setOpencvCurrent((opencvCurrentIndex() - 1 + opencvLen) % opencvLen)"
+            (keydown.enter)="setOpencvCurrent((opencvCurrentIndex() - 1 + opencvLen) % opencvLen)"
             tabindex="0"
           >
             <div class="card-content">
@@ -34,7 +34,7 @@
           </div>
         }
 
-        @if (activeProject(); as proj) {
+        @if (activeOpencvProject(); as proj) {
           <a [routerLink]="proj.route" class="project-card active">
             <div class="card-content">
               <h3>{{ proj.titleKey | transloco }}</h3>
@@ -44,11 +44,11 @@
           </a>
         }
 
-        @if (rightProject(); as proj) {
+        @if (rightOpencvProject(); as proj) {
           <div
             class="project-card right"
-            (click)="setCurrent((currentIndex() + 1) % len)"
-            (keydown.enter)="setCurrent((currentIndex() + 1) % len)"
+            (click)="setOpencvCurrent((opencvCurrentIndex() + 1) % opencvLen)"
+            (keydown.enter)="setOpencvCurrent((opencvCurrentIndex() + 1) % opencvLen)"
             tabindex="0"
           >
             <div class="card-content">
@@ -62,8 +62,72 @@
 
       <button
         class="arrow arrow-right"
-        [class.disabled]="arrowsDisabled()"
-        (click)="next()"
+        [class.disabled]="opencvArrowsDisabled()"
+        (click)="opencvNext()"
+        [attr.aria-label]="'projects.arrow.next' | transloco"
+      >
+        ›
+      </button>
+    </div>
+
+    <h3 class="section-title">{{ 'projects.sdl2Section' | transloco }}</h3>
+
+    <div class="carousel">
+      <button
+        class="arrow arrow-left"
+        [class.disabled]="sdl2ArrowsDisabled()"
+        (click)="sdl2Previous()"
+        [attr.aria-label]="'projects.arrow.previous' | transloco"
+      >
+        ‹
+      </button>
+
+      <div class="cards-viewport">
+        @if (leftSdl2Project(); as proj) {
+          <div
+            class="project-card left"
+            (click)="setSdl2Current((sdl2CurrentIndex() - 1 + sdl2Len) % sdl2Len)"
+            (keydown.enter)="setSdl2Current((sdl2CurrentIndex() - 1 + sdl2Len) % sdl2Len)"
+            tabindex="0"
+          >
+            <div class="card-content">
+              <h3>{{ proj.titleKey | transloco }}</h3>
+              <p>{{ proj.descriptionKey | transloco }}</p>
+              <span class="card-tag">{{ proj.tagKey | transloco }}</span>
+            </div>
+          </div>
+        }
+
+        @if (activeSdl2Project(); as proj) {
+          <a [routerLink]="proj.route" class="project-card active">
+            <div class="card-content">
+              <h3>{{ proj.titleKey | transloco }}</h3>
+              <p>{{ proj.descriptionKey | transloco }}</p>
+              <span class="card-tag">{{ proj.tagKey | transloco }}</span>
+            </div>
+          </a>
+        }
+
+        @if (rightSdl2Project(); as proj) {
+          <div
+            class="project-card right"
+            (click)="setSdl2Current((sdl2CurrentIndex() + 1) % sdl2Len)"
+            (keydown.enter)="setSdl2Current((sdl2CurrentIndex() + 1) % sdl2Len)"
+            tabindex="0"
+          >
+            <div class="card-content">
+              <h3>{{ proj.titleKey | transloco }}</h3>
+              <p>{{ proj.descriptionKey | transloco }}</p>
+              <span class="card-tag">{{ proj.tagKey | transloco }}</span>
+            </div>
+          </div>
+        }
+      </div>
+
+      <button
+        class="arrow arrow-right"
+        [class.disabled]="sdl2ArrowsDisabled()"
+        (click)="sdl2Next()"
         [attr.aria-label]="'projects.arrow.next' | transloco"
       >
         ›

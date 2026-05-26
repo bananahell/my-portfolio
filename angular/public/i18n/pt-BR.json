@@ -25,6 +25,7 @@
     "backToHome": "← Voltar ao Início",
     "title": "Projetos",
     "opencvSection": "OpenCV",
+    "sdl2Section": "SDL2",
     "arrow": {
       "previous": "Projeto anterior",
       "next": "Próximo projeto"
@@ -42,7 +43,12 @@
         "title": "Detecção de Bordas Canny",
         "desc": "Veja o mundo como um wireframe com o clássico algoritmo Canny."
       },
-      "tag": "OpenCV"
+      "opencvTag": "OpenCV",
+      "breakout": {
+        "title": "Breakout",
+        "desc": "Um clássico quebra-tijolos rodando nativamente no seu navegador via WebAssembly."
+      },
+      "sdlTag": "SDL2"
     }
   },
   "opencv": {
@@ -63,5 +69,15 @@
       "desc": "Algoritmo Canny clássico aplicado à sua webcam. Todo o processamento ocorre no seu navegador."
     },
     "live": "Ao Vivo"
+  },
+  "sdl": {
+    "backToProjects": "← Voltar para Projetos",
+    "breakout": {
+      "title": "SDL2 Breakout",
+      "heading": "Breakout Clássico",
+      "desc": "Use o mouse ou teclado para destruir tijolos. Compilado de C++ para WebAssembly.",
+      "placeholder": "A tela do jogo aparecerá aqui"
+    },
+    "comingSoon": "Em Breve"
   }
 }

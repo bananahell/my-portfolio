@@ -102,8 +102,7 @@ export class CannyEdge implements OnInit, OnDestroy {
           const gray = new cv.Mat();
           cv.cvtColor(src, gray, cv.COLOR_BGR2GRAY);
           const edges = new cv.Mat();
-          cv.Canny(gray, edges, 50, 150); // low threshold, high threshold
-          // Convert edges (single channel) to BGR for display
+          cv.Canny(gray, edges, 50, 150);
           const bgr = new cv.Mat();
           cv.cvtColor(edges, bgr, cv.COLOR_GRAY2BGR);
           cv.imshow(outputCanvas, bgr);

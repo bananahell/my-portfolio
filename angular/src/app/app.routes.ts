@@ -8,6 +8,7 @@ import { Contact } from './pages/contact/contact';
 import { GrayscaleDemo } from './pages/grayscale-demo/grayscale-demo';
 import { FaceDetection } from './pages/face-detection/face-detection';
 import { CannyEdge } from './pages/canny-edge/canny-edge';
+import { SdlBreakout } from './pages/sdl-breakout/sdl-breakout';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'projects/opencv/grayscale', component: GrayscaleDemo },
   { path: 'projects/opencv/face-detection', component: FaceDetection },
   { path: 'projects/opencv/canny', component: CannyEdge },
+  { path: 'projects/sdl/breakout', component: SdlBreakout },
   { path: 'blog', component: Blog },
   { path: 'now', component: Now },
   { path: 'contact', component: Contact },

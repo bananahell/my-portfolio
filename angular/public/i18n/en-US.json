@@ -25,6 +25,7 @@
     "backToHome": "← Back to Home",
     "title": "Projects",
     "opencvSection": "OpenCV",
+    "sdl2Section": "SDL2",
     "arrow": {
       "previous": "Previous project",
       "next": "Next project"
@@ -42,7 +43,12 @@
         "title": "Canny Edge Detection",
         "desc": "See the world as a wireframe with the classic Canny algorithm."
       },
-      "tag": "OpenCV"
+      "opencvTag": "OpenCV",
+      "breakout": {
+        "title": "Breakout",
+        "desc": "A classic brick-breaker running natively in your browser via WebAssembly."
+      },
+      "sdlTag": "SDL2"
     }
   },
   "opencv": {
@@ -63,5 +69,15 @@
       "desc": "Classic Canny algorithm applied to your webcam. All processing happens in your browser."
     },
     "live": "Live"
+  },
+  "sdl": {
+    "backToProjects": "← Back to Projects",
+    "breakout": {
+      "title": "SDL2 Breakout",
+      "heading": "Classic Breakout",
+      "desc": "Use your mouse or keyboard to smash bricks. Compiled from C++ to WebAssembly.",
+      "placeholder": "The game canvas will appear here"
+    },
+    "comingSoon": "Coming Soon"
   }
 }
