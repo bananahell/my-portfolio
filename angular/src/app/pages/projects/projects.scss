@@ -44,7 +44,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   margin-bottom: 4rem;
 }
 
@@ -64,10 +63,16 @@ h2 {
   z-index: 10;
   flex-shrink: 0;
 
-  &:hover {
+  &:hover:not(.disabled) {
     color: var(--accent-primary);
     border-color: var(--accent-primary);
     background-color: rgba(184, 134, 11, 0.1);
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
   }
 }
 
@@ -91,12 +96,16 @@ h2 {
   padding: 2rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 0.35s ease,
+    filter 0.35s ease;
   box-sizing: border-box;
+  will-change: transform, opacity, filter;
 
   opacity: 0;
   filter: blur(4px);
-  transform: scale(0.8) translateX(0);
+  transform: scale(0.85);
   pointer-events: none;
 
   &.active {
@@ -108,25 +117,19 @@ h2 {
   }
 
   &.left {
-    opacity: 0.4;
+    opacity: 0.7;
     filter: blur(2px);
-    transform: scale(0.85) translateX(-110%);
+    transform: scale(0.9) translateX(-120%);
     z-index: 1;
     pointer-events: auto;
   }
 
   &.right {
-    opacity: 0.4;
+    opacity: 0.7;
     filter: blur(2px);
-    transform: scale(0.85) translateX(110%);
+    transform: scale(0.9) translateX(120%);
     z-index: 1;
     pointer-events: auto;
-  }
-
-  &.hidden {
-    opacity: 0;
-    transform: scale(0.8) translateX(0);
-    pointer-events: none;
   }
 
   &:hover {

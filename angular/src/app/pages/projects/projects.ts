@@ -1,6 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgClass } from '@angular/common';
 
 interface Project {
   route: string;
@@ -12,7 +11,7 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
@@ -33,31 +32,41 @@ export class Projects {
   ];
 
   currentIndex = signal(0);
+  readonly len = this.opencvProjects.length;
+
+  readonly activeProject = computed(() => this.opencvProjects[this.currentIndex()]);
+  readonly leftProject = computed(() => {
+    if (this.len <= 1) {
+      return null;
+    }
+    const idx = (this.currentIndex() - 1 + this.len) % this.len;
+    return this.opencvProjects[idx];
+  });
+  readonly rightProject = computed(() => {
+    if (this.len <= 1) {
+      return null;
+    }
+    const idx = (this.currentIndex() + 1) % this.len;
+    return this.opencvProjects[idx];
+  });
+
+  readonly arrowsDisabled = computed(() => this.len <= 1);
 
   previous(): void {
-    this.currentIndex.update((i) => (i > 0 ? i - 1 : this.opencvProjects.length - 1));
+    if (this.len <= 1) {
+      return;
+    }
+    this.currentIndex.update((i) => (i - 1 + this.len) % this.len);
   }
 
   next(): void {
-    this.currentIndex.update((i) => (i < this.opencvProjects.length - 1 ? i + 1 : 0));
+    if (this.len <= 1) {
+      return;
+    }
+    this.currentIndex.update((i) => (i + 1) % this.len);
   }
 
   setCurrent(index: number): void {
     this.currentIndex.set(index);
-  }
-
-  getCardClass(index: number): string {
-    const diff = index - this.currentIndex();
-    const len = this.opencvProjects.length;
-    if (diff === 0) {
-      return 'active';
-    }
-    if (diff === -1 || diff === len - 1) {
-      return 'left';
-    }
-    if (diff === 1 || diff === -(len - 1)) {
-      return 'right';
-    }
-    return 'hidden';
   }
 }

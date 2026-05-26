@@ -9,37 +9,65 @@
     <h3 class="section-title">OpenCV</h3>
 
     <div class="carousel">
-      <button class="arrow arrow-left" (click)="previous()" aria-label="Previous project">‹</button>
+      <button
+        class="arrow arrow-left"
+        [class.disabled]="arrowsDisabled()"
+        (click)="previous()"
+        aria-label="Previous project"
+      >
+        ‹
+      </button>
 
       <div class="cards-viewport">
-        @for (project of opencvProjects; track project.route; let i = $index) {
-          @if (i === currentIndex()) {
-            <a [routerLink]="project.route" class="project-card" [ngClass]="getCardClass(i)">
-              <div class="card-content">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-                <span class="card-tag">{{ project.tag }}</span>
-              </div>
-            </a>
-          } @else {
-            <div
-              class="project-card"
-              [ngClass]="getCardClass(i)"
-              (click)="setCurrent(i)"
-              (keydown.enter)="setCurrent(i)"
-              tabindex="0"
-            >
-              <div class="card-content">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-                <span class="card-tag">{{ project.tag }}</span>
-              </div>
+        @if (leftProject(); as proj) {
+          <div
+            class="project-card left"
+            (click)="setCurrent((currentIndex() - 1 + len) % len)"
+            (keydown.enter)="setCurrent((currentIndex() - 1 + len) % len)"
+            tabindex="0"
+          >
+            <div class="card-content">
+              <h3>{{ proj.title }}</h3>
+              <p>{{ proj.description }}</p>
+              <span class="card-tag">{{ proj.tag }}</span>
             </div>
-          }
+          </div>
+        }
+
+        @if (activeProject(); as proj) {
+          <a [routerLink]="proj.route" class="project-card active">
+            <div class="card-content">
+              <h3>{{ proj.title }}</h3>
+              <p>{{ proj.description }}</p>
+              <span class="card-tag">{{ proj.tag }}</span>
+            </div>
+          </a>
+        }
+
+        @if (rightProject(); as proj) {
+          <div
+            class="project-card right"
+            (click)="setCurrent((currentIndex() + 1) % len)"
+            (keydown.enter)="setCurrent((currentIndex() + 1) % len)"
+            tabindex="0"
+          >
+            <div class="card-content">
+              <h3>{{ proj.title }}</h3>
+              <p>{{ proj.description }}</p>
+              <span class="card-tag">{{ proj.tag }}</span>
+            </div>
+          </div>
         }
       </div>
 
-      <button class="arrow arrow-right" (click)="next()" aria-label="Next project">›</button>
+      <button
+        class="arrow arrow-right"
+        [class.disabled]="arrowsDisabled()"
+        (click)="next()"
+        aria-label="Next project"
+      >
+        ›
+      </button>
     </div>
   </div>
 </section>
