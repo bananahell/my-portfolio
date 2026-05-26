@@ -36,28 +36,22 @@
 
   .demo-area {
     background-color: #0a0a0a;
-    padding: 3rem;
-    text-align: center;
-    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 250px;
+    padding: 1rem;
+  }
 
-    .placeholder {
-      color: var(--text-muted);
-      span {
-        font-size: 3rem;
-        display: block;
-        margin-bottom: 1rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
-    }
+  .output-canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
   }
 
   .demo-info {
     padding: 2rem;
+    text-align: center;
 
     h3 {
       font-family: var(--font-heading);
@@ -68,14 +62,13 @@
     p {
       color: var(--text-muted);
       font-size: 0.95rem;
-      line-height: 1.6;
       margin-bottom: 1rem;
     }
 
     .demo-status {
       display: inline-block;
-      background-color: var(--accent-secondary);
-      color: #fff;
+      background-color: var(--accent-primary);
+      color: var(--bg-primary);
       padding: 0.2rem 1rem;
       border-radius: 12px;
       font-size: 0.8rem;

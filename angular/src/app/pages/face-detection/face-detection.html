@@ -7,15 +7,14 @@
 
   <div class="demo-card">
     <div class="demo-area">
-      <div class="placeholder">
-        <span>👤</span>
-        <p>Live face detection will appear here</p>
-      </div>
+      <video #videoElement style="display: none" autoplay playsinline muted></video>
+      <canvas #hiddenCanvas style="display: none"></canvas>
+      <canvas #canvasElement class="output-canvas"></canvas>
     </div>
     <div class="demo-info">
       <h3>Real-time Face Detection</h3>
       <p>Detect faces using your webcam and OpenCV.js, entirely in the browser.</p>
-      <div class="demo-status">Coming soon</div>
+      <div class="demo-status">Live</div>
     </div>
   </div>
 </section>
