@@ -5,11 +5,13 @@ import { Projects } from './pages/projects/projects';
 import { Blog } from './pages/blog/blog';
 import { Now } from './pages/now/now';
 import { Contact } from './pages/contact/contact';
+import { OpenCVDemo } from './pages/opencv-demo/opencv-demo';
 
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'about', component: About },
   { path: 'projects', component: Projects },
+  { path: 'projects/opencv', component: OpenCVDemo },
   { path: 'blog', component: Blog },
   { path: 'now', component: Now },
   { path: 'contact', component: Contact },

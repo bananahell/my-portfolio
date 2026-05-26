@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-opencv-demo',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './projects.html',
-  styleUrl: './projects.scss',
+  templateUrl: './opencv-demo.html',
+  styleUrl: './opencv-demo.scss',
 })
-export class Projects {}
+export class OpenCVDemo {}

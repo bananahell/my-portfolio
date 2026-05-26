@@ -1,0 +1,91 @@
+.opencv-demo {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  .back-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--accent-primary);
+    }
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    color: var(--accent-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.demo-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .demo-area {
+    background-color: #0a0a0a;
+    padding: 3rem;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .placeholder {
+      color: var(--text-muted);
+      span {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .demo-info {
+    padding: 2rem;
+
+    h3 {
+      font-family: var(--font-heading);
+      color: var(--accent-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .demo-status {
+      display: inline-block;
+      background-color: var(--accent-secondary);
+      color: #fff;
+      padding: 0.2rem 1rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
