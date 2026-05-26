@@ -89,3 +89,48 @@
     }
   }
 }
+
+.project-card {
+  display: block;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-primary);
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .card-tag {
+    display: inline-block;
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

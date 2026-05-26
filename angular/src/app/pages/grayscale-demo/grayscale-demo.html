@@ -1,0 +1,20 @@
+<section class="grayscale-demo">
+  <div class="back-wrapper">
+    <a routerLink="/projects/opencv" class="back-link">← Back to OpenCV Lab</a>
+  </div>
+
+  <h2>Grayscale Filter</h2>
+
+  <div class="demo-card">
+    <div class="demo-area">
+      <video #videoElement style="display: none" autoplay playsinline muted></video>
+      <canvas #hiddenCanvas style="display: none"></canvas>
+      <canvas #canvasElement class="output-canvas"></canvas>
+    </div>
+    <div class="demo-info">
+      <h3>Real-time Grayscale</h3>
+      <p>Your webcam feed processed by OpenCV.js in the browser. No video leaves your computer.</p>
+      <div class="demo-status">Live</div>
+    </div>
+  </div>
+</section>
