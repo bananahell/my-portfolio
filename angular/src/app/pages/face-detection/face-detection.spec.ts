@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpenCVDemo } from './opencv-demo';
+import { FaceDetection } from './face-detection';
 
-describe('OpenCVDemo', () => {
-  let component: OpenCVDemo;
-  let fixture: ComponentFixture<OpenCVDemo>;
+describe('FaceDetection', () => {
+  let component: FaceDetection;
+  let fixture: ComponentFixture<FaceDetection>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OpenCVDemo],
+      imports: [FaceDetection],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OpenCVDemo);
+    fixture = TestBed.createComponent(FaceDetection);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
