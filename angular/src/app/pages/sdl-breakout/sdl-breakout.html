@@ -7,15 +7,17 @@
 
   <div class="demo-card">
     <div class="demo-area">
-      <div class="placeholder">
-        <span>🕹️</span>
-        <p>{{ 'sdl.breakout.placeholder' | transloco }}</p>
-      </div>
+      <iframe
+        src="/wasm/sdl-game/game.html"
+        class="game-iframe"
+        title="Breakout game"
+        allow="autoplay"
+      ></iframe>
     </div>
     <div class="demo-info">
       <h3>{{ 'sdl.breakout.heading' | transloco }}</h3>
       <p>{{ 'sdl.breakout.desc' | transloco }}</p>
-      <div class="demo-status">{{ 'sdl.comingSoon' | transloco }}</div>
+      <div class="demo-status">{{ 'general.live' | transloco }}</div>
     </div>
   </div>
 </section>

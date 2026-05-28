@@ -67,8 +67,7 @@
       "title": "Detecção de Bordas Canny",
       "heading": "Detecção de Bordas em Tempo Real",
       "desc": "Algoritmo Canny clássico aplicado à sua webcam. Todo o processamento ocorre no seu navegador."
-    },
-    "live": "Ao Vivo"
+    }
   },
   "sdl": {
     "backToProjects": "← Voltar para Projetos",
@@ -77,7 +76,10 @@
       "heading": "Breakout Clássico",
       "desc": "Use o mouse ou teclado para destruir tijolos. Compilado de C++ para WebAssembly.",
       "placeholder": "A tela do jogo aparecerá aqui"
-    },
+    }
+  },
+  "general": {
+    "live": "Ao Vivo",
     "comingSoon": "Em Breve"
   }
 }

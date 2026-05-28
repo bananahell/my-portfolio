@@ -1,0 +1,10 @@
+.angular/
+
+node_modules/
+
+angular/public/wasm/sdl-game/game.js
+angular/public/wasm/sdl-game/game.wasm
+
+!angular/public/wasm/sdl-game/game.html
+
+docker-compose.override.yml

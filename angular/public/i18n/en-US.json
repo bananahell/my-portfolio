@@ -67,8 +67,7 @@
       "title": "Canny Edge Detection",
       "heading": "Real-time Edge Detection",
       "desc": "Classic Canny algorithm applied to your webcam. All processing happens in your browser."
-    },
-    "live": "Live"
+    }
   },
   "sdl": {
     "backToProjects": "← Back to Projects",
@@ -77,7 +76,10 @@
       "heading": "Classic Breakout",
       "desc": "Use your mouse or keyboard to smash bricks. Compiled from C++ to WebAssembly.",
       "placeholder": "The game canvas will appear here"
-    },
+    }
+  },
+  "general": {
+    "live": "Live",
     "comingSoon": "Coming Soon"
   }
 }
